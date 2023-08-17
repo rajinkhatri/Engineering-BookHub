@@ -7,6 +7,7 @@ import Register from './pages/Register.jsx';
  import Books from './components/faculty1.jsx';
   import Courses from './pages/Courses.jsx';
   import Year from './pages/year.jsx';
+  import HomePage from './components/booksyear1.jsx';
 
 
 function App() {
@@ -14,13 +15,12 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      <Route path="/Courses" element={<Courses />} />
-      <Route path="/Courses/Year" element={<Year />} />
-      <Route path="/Register" element={<Register />} />
       <Route path="/" element={<Login />} />
-      { <Route path="/homepage/faculty" element={<Books />} /> }
-      { <Route path="/Books" element={<AddFaculty />} /> }
-      {/* { <Route path="/result" element={<ResultPage />} /> } */}
+      <Route path="/Register" element={<Register />} />
+      <Route path="/Courses" element={<Courses />} />
+      <Route path="/Year" element={<Year />} />
+      {/* <Route path="/homepage/faculty" element={<Books />} />  */}
+      <Route path="/Books" element={<HomePage />} /> 
     </Routes>
     </>
   );

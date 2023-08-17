@@ -41,12 +41,12 @@ const FacultyCard = ({ faculty }) => {
     };
 
     return (
-        <div className="card" style={{ width: '10 rem', border: '100 px' }}>
+        <div className="card" >
             <img src={faculty.image} alt="faculty" className="img-thumbnail" />
             <div className="card-body">
                 <h5 className="card-title">{faculty.name}</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" style={{margin:"20px"}} className="btn btn-primary" >Edit </a>
+                <a href="#"  className="btn btn-primary" >Edit </a>
                 <a href="#" className="btn btn-primary" onClick={DeleteFaculty}>Delete</a>
             </div>
         </div>
@@ -61,7 +61,7 @@ const FacultyCard = ({ faculty }) => {
 
 
 
-const HomePage = () => {
+const HomePageee = () => {
 
     const [facultyList, setFacultyList] = useState([]);
 
@@ -132,7 +132,7 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default HomePageee;
 
 
 // const EditFaculty = ({ faculty, onSave, onCancel }) => {
