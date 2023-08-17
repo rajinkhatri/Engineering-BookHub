@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const FacultyCard = ({ faculty }) => {
 
     const facultyname = faculty.name;
+    // const facultyimage = faculty.image;
     const DeleteFaculty = async (event) => {
 
         // const facultyname = document.getElementsByClassName('card-title').value;
@@ -19,7 +20,7 @@ const FacultyCard = ({ faculty }) => {
                 },
                 body: JSON.stringify({
                     facultyname: facultyname,
-                    // facultyimage: facultyimage,
+                    //  facultyimage: facultyimage,
                 }),
             });
     
@@ -40,12 +41,12 @@ const FacultyCard = ({ faculty }) => {
     };
 
     return (
-        <div className="card" style={{ width: '18 rem', border: '100 px' }}>
+        <div className="card" style={{ width: '10 rem', border: '100 px' }}>
             <img src={faculty.image} alt="faculty" className="img-thumbnail" />
             <div className="card-body">
                 <h5 className="card-title">{faculty.name}</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary" >Edit</a>
+                <a href="#" style={{margin:"20px"}} className="btn btn-primary" >Edit </a>
                 <a href="#" className="btn btn-primary" onClick={DeleteFaculty}>Delete</a>
             </div>
         </div>
@@ -109,8 +110,8 @@ const HomePage = () => {
     };
 
     return (
-        <div>
-            <h1>welcome to main page of engineering bookhub.</h1>
+        <div className="container">
+            <h1 style={{marginLeft:"200px"}}>welcome to main page of Engineering-Bookhub</h1>
             <form onSubmit={AddFaculty}>
                 <div className="form-group ">
                     <label htmlFor="facultyname" className="label"></label>
@@ -120,7 +121,7 @@ const HomePage = () => {
                     <input type="file" name="facultyimage" id="facultyimage" placeholder="Upload Image" className="form-control password-form" onChange={(e) => setfacultyimage(e.target.value)} />
 
                 </div>
-                <button type="submit" className="login-btn btn btn-primary">Add new faculty</button>
+                <button type="submit" className="login-btn btn btn-primary">Add Books</button>
             </form>
 
 

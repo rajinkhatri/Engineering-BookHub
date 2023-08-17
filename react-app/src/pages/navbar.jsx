@@ -7,8 +7,9 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#e3f2fd"}}>
         <div className="container-fluid d-flex align-items-center">
                 {/* <!-- logo  --> */}
-            <div className="logo d-flex">
-                <Link className="navbar-brand" to="#">BookHub</Link>
+                <div className="logo d-flex">
+               <Link to="/Courses"> <img style={{overflow:"auto", width: "50px", height:"50px"}} src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="BookHub" />
+                {/* <Link className="navbar-brand" to="#">BookHub</Link> */}</Link>
             </div>
                 {/* <!-- end of logo --> */}
             <div className="links">

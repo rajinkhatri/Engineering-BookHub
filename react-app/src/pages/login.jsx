@@ -35,8 +35,8 @@ function Login() {
       const data = await response.json();
 
       if (data.success){
-        Navigate('/homepage');
-        console.log('yes finally');
+        Navigate('/Courses');
+ 
       }
       else{
         console.log('cannot login');
