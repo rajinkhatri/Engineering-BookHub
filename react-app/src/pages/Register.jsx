@@ -43,9 +43,9 @@ function Register() {
 };
 
   return (
-    <div className="container" style={{ marginTop: '100px' }}>
+    <div style={{ marginTop: '100px' }}>
       <h1 style={{ marginLeft: "30%" }}>Sign up page</h1>
-      <form onSubmit={handleRegister}>
+      <form onSubmit={handleRegister} style={{ marginLeft: "30%" }}>
         <div className="form-group ">
           <label htmlFor="username" className="label">Username</label>
           <input type="text" name="username" id="username" placeholder="Username" className="form-control username-form" onChange={(e) => setUsername(e.target.value)} />

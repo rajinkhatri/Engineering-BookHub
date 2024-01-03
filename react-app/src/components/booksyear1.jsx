@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './booksyear1.css';
+const image = 'https://static.vecteezy.com/system/resources/previews/009/399/398/original/old-vintage-book-clipart-design-illustration-free-png.png';
 
 const BookCard = ({ book }) => {
 
@@ -87,19 +88,35 @@ const BookCard = ({ book }) => {
 
     return (
         <div className="top-card" >
-            {/* <img src={book.image} alt="Book" className="img-thumbnail" /> */}
             <div className="book-card" >
-                <h5 >Subject: {book.name}</h5>
-                <h5 >Author: {book.author}</h5>
-                <h5 >Date of publication: {book.date}</h5>
-                <h5 >Edition Number: {book.edition}</h5>
-                <h5 >Publisher: {book.publisher}</h5>
-                {/* <h5 >{book.name}</h5> */}
-                {/* <p >Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                <a href="#" className="btn btn-primary" onClick={handleEdit}>Edit</a>
-                <a className="btn btn-primary" onClick={DeleteBook}>Delete</a>
+                {/* <article className="book"> */}
+                    <img src={image} alt="Book" className="img-thumbnail" />
+                    <h5 >Subject: {book.name}</h5>
+                    <h5 >Author: {book.author}</h5>
+                    <h5 >Date of publication: {book.date}</h5>
+                    <h5 >Edition Number: {book.edition}</h5>
+                    <h5 >Publisher: {book.publisher}</h5>
+                    {/* <h5 >{book.name}</h5> */}
+                    {/* <p >Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                    <a href="#" className="btn btn-primary" onClick={handleEdit}>Edit</a>
+                    <a className="btn btn-primary" onClick={DeleteBook}>Delete</a>
+                {/* </article> */}
             </div>
         </div>
+        // <div className="container">
+        //     <article className="book">
+        //     <img src={image} alt="Book" className="img-thumbnail" />
+        //             <h5 >Subject: {book.name}</h5>
+        //             <h5 >Author: {book.author}</h5>
+        //             <h5 >Date of publication: {book.date}</h5>
+        //             <h5 >Edition Number: {book.edition}</h5>
+        //             <h5 >Publisher: {book.publisher}</h5>
+        //             {/* <h5 >{book.name}</h5> */}
+        //             {/* <p >Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+        //             <a href="#" className="btn btn-primary" onClick={handleEdit}>Edit</a>
+        //             <a className="btn btn-primary" onClick={DeleteBook}>Delete</a>
+        //     </article>
+        // </div>
     );
 };
 
@@ -155,7 +172,6 @@ const HomePage = () => {
 
     return (
         <div >
-            <h1 style={{ marginLeft: "200px" }}>Welcome to the main page of Engineering-Bookhub</h1>
             <form onSubmit={AddBook}>
                 <div >
                     <label htmlFor="bookName" className="label"></label>
@@ -179,7 +195,9 @@ const HomePage = () => {
                 </div>
                 <button type="submit" className="btn btn-primary upside">Add Books</button>
             </form>
-
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
+                <h2>Your books for the year are provided below.</h2>
+            </div>
             {bookList.map(book => (
                 <BookCard key={book.name} book={book} />
             ))}
